@@ -8,11 +8,11 @@ A newspaper front page for Saturday 21 November 2026, drawn as a single 1024x102
 
 ## What is on the page
 
-This commit is the frame entry: it carries the kit starter image so the entry is locked in early on the morning of 21 November 2026. The final poster, built from the full day's world news of Saturday 21 November 2026, replaces it the next morning before the deadline, in the established pattern of this series: one lead story, five to six panels below it, and a bottom strip carrying the rest of the day.
+The lead is the war crossing NATO's border: Russian Kh-101 missiles hit Polish territory during the mass strike on Ukraine, Warsaw asks the alliance for support, and Danish Gripen jets engage over Poland. Six panels carry the rest of the day: the $4 trillion AI wipeout that sent the Nasdaq to its worst week since March 2020 and the S&P 500 into correction; Putin and Trump targeting the world court in the Shenzhen declaration while Xi presses Washington on Taiwan; Moscow's mass strike a day after the summit, with Kryvyi Rih counting its dead; COP31 climate talks nearing crunch time with no deal in sight; Myanmar and China rejecting the ICJ genocide ruling as unjust; and JPMorgan, Visa and Mastercard reporting a cyberattack on shared vendors. A bottom strip sweeps up the Houthi workshops destroyed in Sana'a, the IRGC claim beyond Hormuz, the 900,000 AI chips approved for China, Cyclone Akvan's landfall, the EU's billion-euro arms package, Bukele's third-term bid, the new South China Sea runway and Europe's offer of talks to Moscow.
 
 ## How it was built
 
-The page is typeset in HTML with real text and rendered to PNG, so every headline stays sharp at small sizes. `main.ts` is the entrypoint: it checks `entry.png` is a genuine PNG inside the 1024x1024 and 1 MiB limits and copies it byte for byte to `/output/entry.png`.
+The page is typeset in HTML with real text and rendered to PNG, so every headline stays sharp at small sizes. `main.ts` is the entrypoint: it checks `entry.png` is a genuine PNG inside the 1024x1024 and 1 MiB limits, then copies it byte for byte to `/output/entry.png` and logs the page's SHA-256 fingerprint.
 
 Run it locally:
 
